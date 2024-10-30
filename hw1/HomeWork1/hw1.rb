@@ -70,11 +70,7 @@ class Student
   end
 
   def remove_student!
-    @@students.each { |student|
-      if student.surname == surname && student.name == name && student.date_of_birth.to_s == date_of_birth.to_s
-        @@students.delete(student)
-      end
-    }
+    @@students.delete(self)
   end
 
   def self.get_students_by_age (age)
